@@ -1,8 +1,12 @@
 apply plugin: 'java'
 apply plugin: 'idea'
+apply plugin: 'maven-publish'
 
 sourceCompatibility = 11
 targetCompatibility = 11
+
+group 'com.github.UstadMobile'
+version "0.1a"
 
 repositories {
     mavenCentral()
@@ -67,3 +71,13 @@ task determineVersion {
 }
 
 compileJava.dependsOn (determineVersion, processResources)
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifactId = "agent15"
+
+            from components.java
+        }
+    }
+}
