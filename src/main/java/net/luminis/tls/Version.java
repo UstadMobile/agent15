@@ -30,7 +30,7 @@ public class Version {
     }
 
     public static String getVersion() {
-        InputStream in = Version.class.getResourceAsStream("version.properties");
+        InputStream in = Version.class.getResourceAsStream("/net/luminis/tls/version.properties");
         if (in != null) {
             try (BufferedReader reader = new BufferedReader(new InputStreamReader(in))) {
                 return reader.readLine();

@@ -6,7 +6,7 @@ sourceCompatibility = 11
 targetCompatibility = 11
 
 group 'com.github.UstadMobile'
-version "0.1a"
+version "0.1b-snapshot"
 
 repositories {
     mavenCentral()
